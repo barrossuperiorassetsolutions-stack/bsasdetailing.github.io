@@ -62,6 +62,18 @@ header {
     color: var(--secondary-color);
 }
 
+.phone-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: var(--white);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, #2a2a2a 100%);
@@ -89,6 +101,8 @@ header {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .cta-button:hover {
@@ -162,6 +176,23 @@ header {
     text-align: center;
 }
 
+.contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.contact-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -207,10 +238,26 @@ footer {
     text-align: center;
 }
 
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
+    }
+
+    .phone-link {
+        display: block;
+        margin-top: 1rem;
     }
 
     .hero h2 {
