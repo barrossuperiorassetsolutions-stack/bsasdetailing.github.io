@@ -1,691 +1,144 @@
-<img width="1254" height="1254" alt="file_00000000989071fd8c0722ec0795a6be (1)" src="https://github.com/user-attachments/assets/7c22a4b4-a567-4110-b4d1-3735541bd022" />
-/\* \--- COMPREHENSIVE PREMIUM COLOR PALETTE \--- \*/  
-:root {  
-    \--primary-bg: \#121214;  
-    \--secondary-bg: \#1a1a1e;
-
-    \--accent-gold: \#d4af37;  
-    \--accent-gold-light: \#e6c766;
-
-    \--accent-green: \#0f8b5f;  
-    \--accent-blue: \#1846b3;
-
-    \--text-primary: \#ffffff;  
-    \--text-secondary: \#cbd5e1;  
-    \--text-muted: \#94a3b8;
-
-    \--border-color: \#2d2d34;  
-    \--transition: 0.3s ease;  
-}
-
-/\* \--- GLOBAL RESETS & NAVIGATION TWEAKS \--- \*/  
-\* {  
-    margin: 0;  
-    padding: 0;  
-    box-sizing: border-box;  
-}
-
-html {  
-    scroll-behavior: smooth;  
-    scroll-padding-top: 110px;  
-}
-
-section {  
-    scroll-margin-top: 110px;  
-}
-
-body {  
-    background: var(--primary-bg);  
-    color: var(--text-secondary);  
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  
-    line-height: 1.7;  
-    overflow-x: hidden;  
-}
-
-.container {  
-    width: min(90%, 1200px);  
-    margin: 0 auto;  
-}
-
-/\* \--- HEADER & BRANDING LOGO \--- \*/  
-header {  
-    position: fixed;  
-    top: 0;  
-    width: 100%;  
-    z-index: 1000;  
-    background: rgba(18, 18, 20, 0.96);  
-    backdrop-filter: blur(10px);  
-    border-bottom: 2px solid var(--accent-gold);  
-}
-
-.navbar {  
-    display: flex;  
-    justify-content: space-between;  
-    align-items: center;  
-    padding: 1.25rem 0;  
-}
-
-.logo img {  
-    height: 80px;  
-    width: auto;  
-    display: block;  
-}
-
-nav ul {  
-    display: flex;  
-    align-items: center;  
-    list-style: none;  
-}
-
-nav ul li {  
-    margin-left: 2rem;  
-}
-
-nav ul li a {  
-    color: var(--text-primary);  
-    text-decoration: none;  
-    font-weight: 500;  
-    transition: color var(--transition);  
-}
-
-nav ul li a:hover {  
-    color: var(--accent-gold);  
-}
-
-.btn-nav {  
-    background: var(--accent-gold);  
-    color: var(--primary-bg) \!important;  
-    padding: 0.65rem 1.25rem;  
-    border-radius: 5px;  
-    font-weight: 700 \!important;  
-}
-
-.btn-nav:hover {  
-    background: white;  
-}
-
-/\* \--- HERO SECTION WITH INTERIOR BACKDROP \--- \*/  
-.hero {  
-    min-height: 100vh;  
-    background:  
-    linear-gradient(  
-        rgba(0,0,0,.80),  
-        rgba(18,18,20,.92)  
-    ),  
-    url('images/interior-detailing-hero.jpg') center center/cover no-repeat;  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    text-align: center;  
-    padding-top: 90px;  
-}
-
-.hero-content h2 {  
-    color: white;  
-    font-size: clamp(2rem, 5vw, 4rem);  
-    margin-bottom: 1rem;  
-    text-transform: uppercase;  
-    letter-spacing: 2px;  
-    text-shadow: 0 3px 15px rgba(0,0,0,.7);  
-}
-
-.hero-content p {  
-    max-width: 700px;  
-    margin: 0 auto 2rem;  
-    color: var(--text-secondary);  
-    font-size: 1.15rem;  
-    text-shadow: 0 2px 8px rgba(0,0,0,.6);  
-}
-
-/\* \--- CALL TO ACTION BUTTONS \--- \*/  
-.btn-main {  
-    display: inline-block;  
-    background: var(--accent-gold);  
-    color: var(--primary-bg);  
-    padding: 1rem 2.5rem;  
-    border-radius: 5px;  
-    text-decoration: none;  
-    font-weight: 700;  
-    letter-spacing: 1px;  
-    text-transform: uppercase;  
-    border: 1px solid transparent;  
-    transition: all var(--transition);  
-}
-
-.btn-submit {  
-    display: inline-block;  
-    background: var(--accent-gold);  
-    color: var(--primary-bg);  
-    width: 100%;  
-    padding: 1rem;  
-    border-radius: 5px;  
-    text-decoration: none;  
-    font-weight: 700;  
-    letter-spacing: 1px;  
-    text-transform: uppercase;  
-    border: 1px solid transparent;  
-    cursor: pointer;  
-    transition: all var(--transition);  
-}
-
-.btn-main:hover,  
-.btn-submit:hover {  
-    background: white;  
-    transform: translateY(-2px);  
-    border-color: var(--accent-green);  
-    box-shadow: 0 0 20px rgba(15,139,95,.25);  
-}
-
-/\* \--- TRUST BAR \--- \*/  
-.trust-bar {  
-    background: var(--secondary-bg);  
-    border-bottom: 1px solid var(--border-color);  
-    padding: 1.5rem 0;  
-}
-
-.trust-container {  
-    display: flex;  
-    justify-content: space-around;  
-    align-items: center;  
-    flex-wrap: wrap;  
-    gap: 1rem;  
-}
-
-.trust-container div {  
-    color: var(--text-primary);  
-    font-weight: 600;  
-    font-size: 1rem;  
-    display: flex;  
-    align-items: center;  
-    gap: 8px;  
-}
-
-.trust-container div i {  
-    color: var(--accent-gold);  
-}
-
-/\* \--- REUSABLE SECTION LABELS \--- \*/  
-.section-title {  
-    text-align: center;  
-    color: white;  
-    font-size: clamp(2rem, 4vw, 3rem);  
-    margin-bottom: 3rem;  
-    text-transform: uppercase;  
-    letter-spacing: 2px;  
-}
-
-.section-title::after {  
-    content: "";  
-    display: block;  
-    width: 80px;  
-    height: 3px;  
-    margin: 15px auto;  
-    background: var(--accent-gold);  
-}
-
-.section-subtitle {  
-    text-align: center;  
-    color: var(--text-secondary);  
-    margin: \-2rem auto 3rem auto;  
-    max-width: 600px;  
-}
-
-/\* \--- SERVICES UPGRADE \--- \*/  
-.services-section {  
-    background: var(--secondary-bg);  
-    padding: 6rem 0;  
-}
-
-.services-grid {  
-    display: grid;  
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  
-    gap: 2rem;  
-}
-
-.service-card {  
-    position: relative;  
-    overflow: hidden;  
-    background: var(--primary-bg);  
-    padding: 2.5rem;  
-    border-radius: 8px;  
-    text-align: center;  
-    box-shadow: 0 0 0 1px var(--border-color);  
-    transition: transform .3s ease, box-shadow .3s ease;  
-}
-
-.service-card::before {  
-    content: "";  
-    position: absolute;  
-    top: 0;  
-    left: 0;  
-    width: 100%;  
-    height: 4px;  
-    background: linear-gradient(90deg, var(--accent-gold), var(--accent-green));  
-}
-
-.service-card:hover {  
-    transform: translateY(-8px);  
-    box-shadow: 0 0 0 1px var(--accent-gold), 0 12px 25px rgba(0,0,0,.3);  
-}
-
-.service-icon {  
-    font-size: 3rem;  
-    color: var(--accent-gold);  
-    margin-bottom: 1rem;  
-}
-
-.service-card h3 {  
-    color: white;  
-    margin-bottom: 1rem;  
-}
-
-/\* \--- GALLERY / RESULTS \--- \*/  
-.gallery-section {  
-    padding: 6rem 0;  
-}
-
-.gallery-grid {  
-    display: grid;  
-    gap: 1.5rem;  
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));  
-}
-
-.gallery-item {  
-    height: 260px;  
-    border-radius: 8px;  
-    overflow: hidden;  
-    position: relative;  
-    cursor: pointer;  
-    background-size: cover;  
-    background-position: center;  
-    box-shadow: 0 5px 15px rgba(0,0,0,.25);  
-    transition: transform .4s ease;  
-}
-
-.gallery-item:hover {  
-    transform: scale(1.03);  
-}
-
-.overlay {  
-    position: absolute;  
-    inset: 0;  
-    background: rgba(18, 18, 20, 0.88);  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    opacity: 0;  
-    transition: opacity .3s ease;  
-}
-
-.gallery-item:hover .overlay {  
-    opacity: 1;  
-}
-
-.overlay span {  
-    border: 2px solid var(--accent-gold);  
-    padding: .75rem 1.5rem;  
-    color: var(--accent-gold);  
-    text-transform: uppercase;  
-    font-weight: 600;  
-}
-
-/\* \--- MOBILE SERVICE AREAS \--- \*/  
-.area-section {  
-    padding: 6rem 0;  
-    background: var(--primary-bg);  
-}
-
-.area-grid {  
-    display: grid;  
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
-    gap: 1.5rem;  
-    margin-top: 2rem;  
-}
-
-.area-card {  
-    background: var(--secondary-bg);  
-    padding: 1.5rem;  
-    border-radius: 6px;  
-    border: 1px solid var(--border-color);  
-    text-align: center;  
-    font-weight: 600;  
-    color: white;  
-    display: flex;  
-    align-items: center;  
-    justify-content: center;  
-    gap: 8px;  
-    transition: transform .3s ease, border-color .3s ease;  
-}
-
-.area-card:hover {  
-    transform: translateY(-4px);  
-    border-color: var(--accent-gold);  
-}
-
-.area-card i {  
-    color: var(--accent-gold);  
-}
-
-/\* \--- CONTACT SECTION \--- \*/  
-.contact-section {  
-    background: var(--secondary-bg);  
-    padding: 6rem 0;  
-}
-
-.contact-form {  
-    max-width: 700px;  
-    margin: auto;  
-    padding: 3rem;  
-    border-radius: 10px;  
-    background: var(--primary-bg);  
-    border: 1px solid var(--border-color);  
-}
-
-.form-group {  
-    margin-bottom: 1.5rem;  
-}
-
-.form-group input,  
-.form-group textarea {  
-    width: 100%;  
-    padding: 1rem;  
-    background: var(--secondary-bg);  
-    border: 1px solid var(--border-color);  
-    border-radius: 5px;  
-    color: white;  
-    font-size: 1rem;  
-    transition: border-color var(--transition);  
-}
-
-.form-group input:focus,  
-.form-group textarea:focus {  
-    outline: none;  
-    border-color: var(--accent-gold);  
-}
-
-::placeholder {  
-    color: var(--text-muted);  
-}
-
-/\* \--- UPGRADED FOOTER TYPOGRAPHY \--- \*/  
-footer {  
-    padding: 3rem 2rem;  
-    text-align: center;  
-    background: var(--primary-bg);  
-    border-top: 1px solid var(--border-color);  
-    color: var(--text-muted);  
-}
-
-.footer-company {  
-    color: white;  
-    font-size: 1.15rem;  
-    font-weight: 700;  
-    letter-spacing: 1px;  
-    margin-bottom: 0.5rem;  
-}
-
-.footer-tagline {  
-    color: var(--accent-gold);  
-    font-weight: 600;  
-    font-size: .9rem;  
-    text-transform: uppercase;  
-    letter-spacing: 2px;  
-    margin-bottom: 1rem;  
-}
-
-footer p {  
-    font-size: 0.9rem;  
-    margin-bottom: 0.5rem;  
-}
-
-/\* \--- ACCESSIBILITY FOCUS BAR \--- \*/  
-a:focus,  
-button:focus,  
-input:focus,  
-textarea:focus {  
-    outline: 2px solid var(--accent-gold);  
-    outline-offset: 2px;  
-}
-
-/\* \--- STICKY MOBILE CALL BAR \--- \*/  
-.mobile-contact-bar {  
-    display: none;  
-    position: fixed;  
-    bottom: 0;  
-    left: 0;  
-    width: 100%;  
-    z-index: 2000;  
-    grid-template-columns: 1fr 1fr;  
-    background: var(--secondary-bg);  
-    border-top: 2px solid var(--accent-gold);  
-}
-
-.bar-btn {  
-    padding: 1rem;  
-    text-align: center;  
-    text-decoration: none;  
-    font-weight: 700;  
-    text-transform: uppercase;  
-    font-size: 0.9rem;  
-    display: flex;  
-    align-items: center;  
-    justify-content: center;  
-    gap: 8px;  
-}
-
-.bar-btn.call {  
-    background: \#1e293b;  
-    color: white;  
-}
-
-.bar-btn.text {  
-    background: var(--accent-gold);  
-    color: var(--primary-bg);  
-}
-
-/\* \--- RESPONSIVE MEDIA QUERIES \--- \*/  
-@media (max-width: 768px) {  
-    .navbar {  
-        flex-direction: column;  
-        gap: 1rem;  
-    }
-
-    .logo img {  
-        height: 60px;  
-    }
-
-    nav ul {  
-        flex-wrap: wrap;  
-        justify-content: center;  
-    }
-
-    nav ul li {  
-        margin: .5rem;  
-    }
-
-    .trust-container {  
-        display: grid;  
-        grid-template-columns: 1fr 1fr;  
-        text-align: left;  
-        padding-left: 5%;  
-    }
-
-    .contact-form {  
-        padding: 1.5rem;  
-    }
-
-    .hero-content h2 {  
-        font-size: 2rem;  
-    }
-
-    .mobile-contact-bar {  
-        display: grid;  
-    }
-
-    body {  
-        padding-bottom: 60px;  
-    }  
-}
-
-document.querySelector('.contact-form').addEventListener('submit', function(e) {  
-    e.preventDefault();  
-      
-    const name \= this.querySelector('input\[name="name"\]').value;  
-    const phone \= this.querySelector('input\[name="phone"\]').value;  
-    const email \= this.querySelector('input\[name="email"\]').value;  
-    const message \= this.querySelector('textarea\[name="message"\]').value;  
-      
-    const emailTo \= "barrossuperiorassetsolutions@gmail.com";  
-    const subject \= encodeURIComponent(\`Interior Detailing Quote Request \- ${name}\`);  
-      
-    const bodyMessage \= \`Name: ${name}\\n\` \+  
-                        \`Phone: ${phone}\\n\` \+  
-                        \`Email: ${email}\\n\\n\` \+  
-                        \`Vehicle & Detailing Details:\\n${message}\`;  
-                          
-    const body \= encodeURIComponent(bodyMessage);  
-      
-    window.location.href \= \`mailto:${emailTo}?subject=${subject}\&body=${body}\`;  
-});
-
-\<\!DOCTYPE html\>  
-\<html lang="en"\>  
-\<head\>  
-    \<meta charset="UTF-8"\>  
-    \<meta name="viewport" content="width=device-width, initial-scale=1.0"\>  
-    \<title\>Barros' Superior Asset Solutions LLC | Premium Mobile Interior Detailing\</title\>  
-    \<meta name="description" content="Premium mobile interior car detailing services in Connecticut. We bring showroom-quality detailing directly to your location."\>  
-    \<link rel="stylesheet" href="style.css"\>  
-    \<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"\>  
-\</head\>  
-\<body\>
-
-    \<header\>  
-        \<div class="container navbar"\>  
-            \<div class="logo"\>  
-                \<img src="images/bsas-logo.png" alt="Barros' Superior Asset Solutions LLC Logo"\>  
-            \</div\>  
-            \<nav\>  
-                \<ul\>  
-                    \<li\>\<a href="\#home"\>Home\</a\>\</li\>  
-                    \<li\>\<a href="\#services"\>Services\</a\>\</li\>  
-                    \<li\>\<a href="\#gallery"\>Gallery\</a\>\</li\>  
-                    \<li\>\<a href="\#contact" class="btn-nav"\>Get Quote\</a\>\</li\>  
-                \</ul\>  
-            \</nav\>  
-        \</div\>  
-    \</header\>
-
-    \<section id="home" class="hero"\>  
-        \<div class="hero-content"\>  
-            \<h2\>Premium Mobile Interior Detailing\</h2\>  
-            \<p\>Bringing showroom-quality interior restoration directly to your home, office, or workplace. Professional mobile detailing throughout Connecticut.\</p\>  
-            \<a href="\#contact" class="btn-main"\>Get A Free Quote\</a\>  
-        \</div\>  
-    \</section\>
-
-    \<section class="trust-bar"\>  
-        \<div class="container trust-container"\>  
-            \<div\>\<i class="fa-solid fa-circle-check"\>\</i\> Mobile Service\</div\>  
-            \<div\>\<i class="fa-solid fa-circle-check"\>\</i\> Interior Specialists\</div\>  
-            \<div\>\<i class="fa-solid fa-circle-check"\>\</i\> Professional Equipment\</div\>  
-            \<div\>\<i class="fa-solid fa-circle-check"\>\</i\> Satisfaction Guaranteed\</div\>  
-        \</div\>  
-    \</section\>
-
-    \<section class="services-section" id="services"\>  
-        \<div class="container"\>  
-            \<h2 class="section-title"\>Interior Detailing Services\</h2\>  
-            \<div class="services-grid"\>  
-                \<div class="service-card"\>  
-                    \<div class="service-icon"\>\<i class="fas fa-soap"\>\</i\>\</div\>  
-                    \<h3\>Interior Deep Cleaning\</h3\>  
-                    \<p\>Comprehensive cleaning of dashboards, panels, vents, cupholders, door panels, and all interior surfaces.\</p\>  
-                \</div\>  
-                \<div class="service-card"\>  
-                    \<div class="service-icon"\>\<i class="fas fa-couch"\>\</i\>\</div\>  
-                    \<h3\>Seat & Carpet Extraction\</h3\>  
-                    \<p\>Professional extraction process designed to remove embedded dirt, stains, and contaminants.\</p\>  
-                \</div\>  
-                \<div class="service-card"\>  
-                    \<div class="service-icon"\>\<i class="fas fa-wind"\>\</i\>\</div\>  
-                    \<h3\>Odor Removal\</h3\>  
-                    \<p\>Targeted treatment for smoke, pet, food, mildew, and other persistent interior odors.\</p\>  
-                \</div\>  
-                \<div class="service-card"\>  
-                    \<div class="service-icon"\>\<i class="fas fa-star"\>\</i\>\</div\>  
-                    \<h3\>Interior Protection\</h3\>  
-                    \<p\>Premium protectants applied to leather, vinyl, plastics, and interior trim surfaces.\</p\>  
-                \</div\>  
-            \</div\>  
-        \</div\>  
-    \</section\>
-
-    \<section class="gallery-section" id="gallery"\>  
-        \<div class="container"\>  
-            \<h2 class="section-title"\>Before & After Results\</h2\>  
-            \<p class="section-subtitle"\>Real transformations performed by Barros' Superior Asset Solutions.\</p\>  
-            \<div class="gallery-grid"\>  
-                \<div class="gallery-item" style="background-image:url('images/before1.jpg');"\>\<div class="overlay"\>\<span\>Before\</span\>\</div\>\</div\>  
-                \<div class="gallery-item" style="background-image:url('images/after1.jpg');"\>\<div class="overlay"\>\<span\>After\</span\>\</div\>\</div\>  
-                \<div class="gallery-item" style="background-image:url('images/before2.jpg');"\>\<div class="overlay"\>\<span\>Before\</span\>\</div\>\</div\>  
-                \<div class="gallery-item" style="background-image:url('images/after2.jpg');"\>\<div class="overlay"\>\<span\>After\</span\>\</div\>\</div\>  
-            \</div\>  
-        \</div\>  
-    \</section\>
-
-    \<section class="area-section"\>  
-        \<div class="container"\>  
-            \<h2 class="section-title"\>Service Areas\</h2\>  
-            \<div class="area-grid"\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> Windsor\</div\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> Hartford\</div\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> Bloomfield\</div\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> Enfield\</div\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> East Windsor\</div\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> Manchester\</div\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> Simsbury\</div\>  
-                \<div class="area-card"\>\<i class="fa-solid fa-location-dot"\>\</i\> South Windsor\</div\>  
-            \</div\>  
-        \</div\>  
-    \</section\>
-
-    \<section class="contact-section" id="contact"\>  
-        \<div class="container"\>  
-            \<h2 class="section-title"\>Request A Free Quote\</h2\>  
-            \<p class="section-subtitle"\>Tell us about your vehicle and we’ll get back to you with pricing.\</p\>  
-              
-            \<form class="contact-form"\>  
-                \<div class="form-group"\>  
-                    \<input type="text" name="name" placeholder="Full Name" required\>  
-                \</div\>  
-                \<div class="form-group"\>  
-                    \<input type="tel" name="phone" placeholder="Phone Number" required\>  
-                \</div\>  
-                \<div class="form-group"\>  
-                    \<input type="email" name="email" placeholder="Email Address" required\>  
-                \</div\>  
-                \<div class="form-group"\>  
-                    \<textarea name="message" rows="6" placeholder="Tell us about your vehicle (Year, make, model, and detailing needs)..." required\>\</textarea\>  
-                \</div\>  
-                \<button type="submit" class="btn-submit"\>Request Quote\</button\>  
-            \</form\>  
-        \</div\>  
-    \</section\>
-
-    \<footer\>  
-        \<div class="footer-company"\>BARROS' SUPERIOR ASSET SOLUTIONS LLC\</div\>  
-        \<div class="footer-tagline"\>Premium Mobile Interior Detailing\</div\>  
-        \<p\>Serving Connecticut • Mobile Interior Detailing\</p\>  
-        \<p\>\&copy; 2026 All Rights Reserved\</p\>  
-    \</footer\>
-
-    \<div class="mobile-contact-bar"\>  
-        \<a href="tel:18605550199" class="bar-btn call"\>\<i class="fa-solid fa-phone"\>\</i\> Call Now\</a\>  
-        \<a href="sms:18605550199?\&body=Hi%20Barros'%20Detailing,%20I'd%20like%20to%20get%20an%20interior%20detailing%20quote..." class="bar-btn text"\>\<i class="fa-solid fa-comment-sms"\>\</i\> Text Us\</a\>  
-    \</div\>
-
-    \<script src="script.js"\>\</script\>  
-\</body\>  
-\</html\>
+# Barros' Superior Asset Solutions LLC
+
+Premium mobile interior car detailing services in Connecticut.
+
+![Website Preview](https://github.com/user-attachments/assets/7c22a4b4-a567-4110-b4d1-3735541bd022)
+
+## 🚗 About Us
+
+Barros' Superior Asset Solutions specializes in bringing showroom-quality interior detailing directly to your home, office, or workplace throughout Connecticut. With professional equipment and specialized techniques, we restore vehicle interiors to like-new condition.
+
+## ✨ Services
+
+- **Interior Deep Cleaning** - Comprehensive cleaning of dashboards, panels, vents, cupholders, door panels, and all interior surfaces
+- **Seat & Carpet Extraction** - Professional extraction process designed to remove embedded dirt, stains, and contaminants
+- **Odor Removal** - Targeted treatment for smoke, pet, food, mildew, and other persistent interior odors
+- **Interior Protection** - Premium protectants applied to leather, vinyl, plastics, and interior trim surfaces
+
+## 🗺️ Service Areas
+
+We proudly serve the following Connecticut locations:
+
+- Windsor
+- Hartford
+- Bloomfield
+- Enfield
+- East Windsor
+- Manchester
+- Simsbury
+- South Windsor
+
+## 🛠️ Technologies Used
+
+- **HTML5** - Semantic markup for accessibility
+- **CSS3** - Modern styling with CSS custom properties and responsive design
+- **JavaScript** - Form handling with email integration
+- **Font Awesome 6.0** - Professional icon library
+- **GitHub Pages** - Static site hosting
+
+## 📁 Project Structure
+
+```
+bsasdetailing.github.io/
+├── README.md          # Project documentation
+├── index.html         # Main website page
+├── style.css          # All styling and responsive design
+├── script.js          # Form handling and interactivity
+├── images/            # Image assets
+│   ├── bsas-logo.png
+│   ├── interior-detailing-hero.jpg
+│   ├── before1.jpg
+│   ├── after1.jpg
+│   ├── before2.jpg
+│   └── after2.jpg
+└── .gitignore         # Git ignore rules
+```
+
+## 🎨 Design Features
+
+### Color Palette
+- **Primary Background**: `#121214` (Dark)
+- **Secondary Background**: `#1a1a1e` (Slightly lighter dark)
+- **Accent Gold**: `#d4af37` (Premium feel)
+- **Accent Green**: `#0f8b5f` (Nature/growth)
+- **Text Primary**: `#ffffff` (White)
+- **Text Secondary**: `#cbd5e1` (Light gray)
+
+### Key Components
+- **Fixed Navigation Header** - Always accessible with backdrop blur effect
+- **Hero Section** - Full-screen background with gradient overlay
+- **Trust Bar** - Quick service highlights with icons
+- **Service Cards** - Grid layout with hover effects
+- **Before/After Gallery** - Image showcase with overlay captions
+- **Contact Form** - Multi-field form with email integration
+- **Mobile Contact Bar** - Fixed bottom bar for phone/SMS on mobile devices
+- **Responsive Design** - Optimized for mobile, tablet, and desktop
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: Full layout with horizontal navigation
+- **Tablet**: Adjusted spacing and grid columns
+- **Mobile** (≤768px): 
+  - Vertical navigation menu
+  - 2-column trust bar
+  - Mobile contact bar with call/text buttons
+  - Adjusted padding and font sizes
+
+## 🔧 How to Use
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/barrossuperiorassetsolutions-stack/bsasdetailing.github.io.git
+   ```
+
+2. **Replace image assets** in the `images/` folder:
+   - `bsas-logo.png` - Company logo
+   - `interior-detailing-hero.jpg` - Hero section background
+   - `before1.jpg` & `after1.jpg` - First before/after pair
+   - `before2.jpg` & `after2.jpg` - Second before/after pair
+
+3. **Update company information** in `index.html`:
+   - Phone number: `18605550199`
+   - Email: `barrossuperiorassetsolutions@gmail.com`
+   - Service areas and descriptions
 
+4. **Deploy to GitHub Pages**:
+   - Ensure repository is public
+   - Enable GitHub Pages in repository settings
+   - Select `main` branch as source
+   - Site will be available at `https://barrossuperiorassetsolutions-stack.github.io/bsasdetailing.github.io/`
+
+## 📞 Contact
+
+- **Phone**: (860) 555-0199
+- **Email**: barrossuperiorassetsolutions@gmail.com
+- **Website**: [Live Site](https://barrossuperiorassetsolutions-stack.github.io/bsasdetailing.github.io/)
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## ✅ Features
+
+- ✨ Modern, premium design with dark theme
+- 📱 Fully responsive on all devices
+- ♿ Accessible with focus indicators and semantic HTML
+- 🎯 SEO-optimized meta tags
+- 📧 Contact form with email integration
+- 🚀 Fast loading with optimized CSS
+- 📍 Service area showcase
+- 🖼️ Before/after gallery with hover effects
+- 📞 Click-to-call on mobile devices
+- 💬 One-click SMS messaging on mobile
+
+## 📝 License
+
+© 2026 Barros' Superior Asset Solutions LLC. All Rights Reserved.
+
+---
+
+**Last Updated**: June 23, 2026
